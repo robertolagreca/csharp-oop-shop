@@ -28,26 +28,33 @@
 using CSharpShop;
 using System.Runtime.CompilerServices;
 
+//Dichiariazione viariabili
 int code;
 int iva;
 float price;
 string name;
 string description;
 
-//Creazione codice
 
 
+//Assegnazione valori esempio
+code = 0;
 iva = 22;
 price = 12.99f;
 name = "I sentieri dei nidi di ragno";
 description = "Autore Italo Calvino";
 
 
-//creazioni oggetti.
-Prodotto prodObject = new Prodotto(name, description, price, iva);
 
-code = prodObject.CreateCode();
+//creazione oggetti.
+Prodotto prodObject = new Prodotto(code, name, description, price, iva);
 
+
+//Creazione codice random
+prodObject.CreateCode();
+
+
+//Input utente variabili
 Console.WriteLine("Inserisci nome, descrizione, prezzo e iva");
 
 name = Console.ReadLine();
@@ -55,12 +62,19 @@ description =Console.ReadLine();
 price = float.Parse(Console.ReadLine());
 iva = int.Parse(Console.ReadLine());
 
+
+
+
+//Set delle variabili nell'oggetto
 prodObject.SetName(name);
 prodObject.SetDescription(description);
 prodObject.SetPrice(price);
 prodObject.SetIva(iva);
 
 
+
+
+//Richiedo variabili a classe Prodotto e Stampa
 code = prodObject.GetCode();
 Console.WriteLine("Il codice creato per il tuo libro è " + code);
 
@@ -70,9 +84,18 @@ Console.WriteLine(prodObject.GetName());
 Console.WriteLine(prodObject.GetDescription());
 
 
+
+//Metodo che restituisce codice + nome
 prodObject.FullName(name, code);
 
+
+
+//Metodo che restituisce il prezzo base
 prodObject.BasicPrice(price);
 //Console.WriteLine(prodObject.GetPrice());
+
+
+
+//Metodo che restituisce il prezzo compreso di IVA.
 prodObject.FullPrice(price, iva);
 //Console.WriteLine(prodObject.GetIva());
