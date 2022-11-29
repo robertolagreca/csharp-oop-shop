@@ -47,7 +47,7 @@ description = "Autore Italo Calvino";
 
 
 //creazione oggetti.
-Prodotto prodObject = new Prodotto(code, name, description, price, iva);
+Prodotto prodObject = new Prodotto(name, description, price, iva);
 
 
 

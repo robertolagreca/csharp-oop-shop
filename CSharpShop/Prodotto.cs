@@ -18,11 +18,11 @@ namespace CSharpShop
         
         
         //COSTRUTTORE
-        public Prodotto(int code, string name, string description, float price, int iva)
+        public Prodotto(string name, string description, float price, int iva)
         {
-            code = CreateCode();
+            CreateCode();
 
-            this.code = code;
+            //this.code = code;
             this.name = name;
             this.description = description;
             this.price = price;
@@ -74,13 +74,13 @@ namespace CSharpShop
         //METODI
 
         //Generazione numero casuale
-        public int CreateCode()
+        private void CreateCode()
         {   
             Random rnd = new Random();
             int randCode;
             randCode = rnd.Next(1, 101);
             code = randCode;
-            return code;
+         
         }
 
         //Stampa prezzo senza IVA
