@@ -68,5 +68,11 @@ Console.WriteLine("Hai inserito i seguenti dati:");
 
 Console.WriteLine(prodObject.GetName());
 Console.WriteLine(prodObject.GetDescription());
-Console.WriteLine(prodObject.GetPrice());
-Console.WriteLine(prodObject.GetIva());
+
+
+prodObject.FullName(name, code);
+
+prodObject.BasicPrice(price);
+//Console.WriteLine(prodObject.GetPrice());
+prodObject.FullPrice(price, iva);
+//Console.WriteLine(prodObject.GetIva());

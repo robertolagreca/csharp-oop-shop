@@ -18,7 +18,7 @@ namespace CSharpShop
         //Costruttore
         public Prodotto(string name, string description, float price, int iva)
         {
-            this.code = code;
+            //this.code = code;
             this.name = name;
             this.description = description;
             this.price = price;
@@ -70,5 +70,28 @@ namespace CSharpShop
 
             return randCode;
         }
+
+        public void BasicPrice(float price)
+        {
+            Console.WriteLine("Il prezzo base è " + price);
+        }
+
+        public void FullPrice(float price, int iva)
+        {
+            float fullPrice;
+
+            fullPrice = price + (price * (iva / 100f));
+
+            Console.WriteLine("Il prezzo compreso di IVA è  " + fullPrice);
+        }
+
+        public void FullName(string name, int code)
+        {
+            string fullName;
+
+            fullName = code.ToString() + name; 
+            Console.WriteLine("Il nome completo è " + fullName);
+        }
+
     }
 }
