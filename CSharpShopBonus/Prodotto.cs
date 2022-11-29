@@ -20,6 +20,8 @@ namespace CSharpShop
         //COSTRUTTORE
         public Prodotto(int code, string name, string description, float price, int iva)
         {
+            code = CreateCode();
+
             this.code = code;
             this.name = name;
             this.description = description;
@@ -71,14 +73,15 @@ namespace CSharpShop
         
         //METODI
 
-        //Generazione numero casuale
-        public void CreateCode()
+       ///Generazione numero casuale
+        public int CreateCode()
         {   
             Random rnd = new Random();
             int randCode;
             randCode = rnd.Next(1, 99999999);
             code = randCode;
-            
+
+            return code;
         }
 
         //Stampa prezzo senza IVA

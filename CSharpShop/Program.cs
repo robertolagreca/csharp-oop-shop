@@ -50,9 +50,6 @@ description = "Autore Italo Calvino";
 Prodotto prodObject = new Prodotto(code, name, description, price, iva);
 
 
-//Creazione codice random
-prodObject.CreateCode();
-
 
 //Input utente variabili
 Console.WriteLine("Inserisci nome, descrizione, prezzo e iva");
