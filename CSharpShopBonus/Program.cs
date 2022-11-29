@@ -49,7 +49,7 @@ description = "Autore Italo Calvino";
 //creazione oggetti.
 Prodotto prodObject = new Prodotto( name, description, price, iva);
 
-
+Prodotto prodObject2 = new Prodotto(name, description, price, iva);
 
 //Input utente variabili
 Console.WriteLine("Inserisci nome, descrizione, prezzo e iva");
@@ -106,3 +106,17 @@ prodObject.PadLeftCode(code);
 //Lista
 List<Prodotto> prodsList = new List<Prodotto>();
 
+prodsList.Add(prodObject);
+prodsList.Add(prodObject2);
+
+
+foreach (Prodotto auto in prodsList)
+{
+    Console.WriteLine(" --------------  ");
+    Console.WriteLine(auto.GetName());
+    Console.WriteLine(auto.GetDescription());
+    Console.WriteLine(auto.GetPrice());
+    Console.WriteLine(auto.GetIva());
+
+    Console.WriteLine(" --------------  ");
+}
